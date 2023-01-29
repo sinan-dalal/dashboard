@@ -4,7 +4,6 @@ namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
 use App\Http\Requests\StoreDropDownRequest;
-use App\Http\Requests\UpdateLandscapeRequest;
 use App\Models\Landscape;
 
 class LandscapeController extends Controller

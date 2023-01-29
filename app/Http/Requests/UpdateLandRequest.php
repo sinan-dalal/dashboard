@@ -6,39 +6,29 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class UpdateLandRequest extends FormRequest
 {
-    /**
-     * Determine if the user is authorized to make this request.
-     *
-     * @return bool
-     */
-    public function authorize()
+    public function authorize(): bool
     {
         return true;
     }
 
-    /**
-     * Get the validation rules that apply to the request.
-     *
-     * @return array<string, mixed>
-     */
-    public function rules()
+    public function rules(): array
     {
         return [
             "description" => 'sometimes',
             "landscape_id" => 'sometimes',
             "site_description_id" => 'sometimes',
             "nature" => 'sometimes',
-            "area" => 'sometimes',
-            "price" => 'sometimes',
-            "length" => 'sometimes',
-            "width" => 'sometimes',
+            "area" => ['sometimes','numeric'],
+            "price" => ['sometimes','numeric'],
+            "length" =>['sometimes','numeric'],
+            "width" => ['sometimes','numeric'],
             "address" => 'sometimes',
             "tract_no" => 'sometimes',
-            "desired_price" => 'sometimes',
+            "desired_price" => ['sometimes','numeric'],
             "direction_id" => 'sometimes',
             'images' => ['sometimes', 'array'],
-            'images.*' => ['sometimes','image', 'mimes:jpeg,bmp,png'],
-            'image' => ['sometimes','image', 'mimes:jpeg,bmp,png'],
-            ];
+            'images.*' => ['sometimes', 'image', 'mimes:jpeg,bmp,png'],
+            'image' => ['sometimes', 'image', 'mimes:jpeg,bmp,png'],
+        ];
     }
 }

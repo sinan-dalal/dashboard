@@ -22,13 +22,13 @@
 
         </div>
         <div class="col-sm-12 col-md-6">
-                <div class="box-body">
-                    <div class="form-group" style="direction: rtl">
-                        <a class="btn btn-primary " href="{{ route($attribute['operation'].'.create') }}">
-                            <i class="fa  fa-plus-square"> إضافة</i>
-                        </a>
-                    </div>
+            <div class="box-body">
+                <div class="form-group" style="direction: rtl">
+                    <a class="btn btn-primary " href="{{ route($attribute['operation'].'.create') }}">
+                        <i class="fa  fa-plus-square"> إضافة</i>
+                    </a>
                 </div>
+            </div>
 
             <div class="widget-search ml-0 clearfix">
                 <i class="fa fa-search"></i>

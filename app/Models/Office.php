@@ -24,7 +24,7 @@ class Office extends Model
         parent::boot();
 
         static::deleting(function ($office) {
-            if ($office->image){
+            if ($office->image) {
                 MediaHelper::deleteFile($office->image);
             }
         });

@@ -46,7 +46,7 @@ use App\Helpers\MediaHelper;
                         <div class="card card-statistics h-100">
                             <div class="card-body">
                                 <div class="table-responsive">
-                                    <?php   $attribute['operation']='lands'; ?>
+                                    <?php   $attribute['operation'] = 'lands'; ?>
                                     @component('land.component.table',[
                                                              'perPage'=>$perPage,
                                                              'attribute'=>$attribute,

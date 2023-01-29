@@ -97,7 +97,6 @@ class LandController extends Controller
             }
         }
 
-
         if (key_exists('image', $data)) {
             $path = MediaHelper::uploadFile($data['image'], 'lands');
 
@@ -114,6 +113,5 @@ class LandController extends Controller
         $land->delete();
 
         return redirect(route('lands.index'));
-
     }
 }

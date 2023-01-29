@@ -37,13 +37,13 @@ class Land extends Model
         parent::boot();
 
         static::deleting(function ($land) {
-            if ($land->image){
-            MediaHelper::deleteFile($land->image);
+            if ($land->image) {
+                MediaHelper::deleteFile($land->image);
             }
 
             $images = $land->images();
 
-            if ($images->get()->isNotEmpty()){
+            if ($images->get()->isNotEmpty()) {
                 foreach ($images->get() as $image) {
                     MediaHelper::deleteFile($image->path);
                 }
@@ -77,5 +77,4 @@ class Land extends Model
     {
         return $this->belongsTo(Office::class);
     }
-
 }

@@ -75,7 +75,7 @@
                                 @csrf
                                 @method('DELETE')
                                 <a href="{{ route($attribute['operation'].'.show',$land->id) }}"
-                                                     class="btn btn-outline-secondary btn-sm">
+                                   class="btn btn-outline-secondary btn-sm">
                                     <i class="fa fa-list-alt "></i>
                                 </a>
                                 <a href="{{ route($attribute['operation'].'.edit',$land->id) }}"

@@ -6,22 +6,12 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class StoreLandRequest extends FormRequest
 {
-    /**
-     * Determine if the user is authorized to make this request.
-     *
-     * @return bool
-     */
-    public function authorize()
+    public function authorize(): bool
     {
         return true;
     }
 
-    /**
-     * Get the validation rules that apply to the request.
-     *
-     * @return array<string, mixed>
-     */
-    public function rules()
+    public function rules(): array
     {
         return [
             "description" => 'sometimes',
@@ -29,13 +19,13 @@ class StoreLandRequest extends FormRequest
             "landscape_id" => 'required',
             "site_description_id" => 'required',
             "nature" => 'required',
-            "area" => 'required',
-            "price" => 'required',
-            "length" => 'required',
-            "width" => 'required',
+            "area" => ['required','numeric'],
+            "price" => ['required','numeric'],
+            "length" => ['required','numeric'],
+            "width" => ['required','numeric'],
             "address" => 'required',
             "tract_no" => 'required',
-            "desired_price" => 'required',
+            "desired_price" => ['required','numeric'],
             "direction_id" => 'required',
             'images' => ['required', 'array'],
             'images.*' => ['required', 'mimes:jpeg,bmp,png'],

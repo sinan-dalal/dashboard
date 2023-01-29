@@ -12,7 +12,8 @@
                 </ul>
             </div>
         @endif
-        <form method="POST" enctype="multipart/form-data" action="{{$method=='POST'?route('offices.store'):route('offices.update',$office->id)}}">
+        <form method="POST" enctype="multipart/form-data"
+              action="{{$method=='POST'?route('offices.store'):route('offices.update',$office->id)}}">
             @csrf
             @if($method!='POST')
                 @method('PUT')
@@ -69,7 +70,7 @@
                     </div>
                 </div>
                 <div class="custom-file">
-                    <input type="file" class="custom-file-input"  name="image">
+                    <input type="file" class="custom-file-input" name="image">
                     <label class="custom-file-label" for="validatedCustomFile">اختر صورة</label>
                     <div class="invalid-feedback">Example invalid custom file feedback</div>
                 </div>

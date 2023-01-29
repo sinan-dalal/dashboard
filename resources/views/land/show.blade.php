@@ -89,8 +89,8 @@ use App\Helpers\MediaHelper;
                 <ol class="breadcrumb pt-0 pr-0 float-left float-sm-right ">
                     <li class="breadcrumb-item"><a href="#" class="default-color">
                             تفاصيل الأرض
-                        </a></li>
-
+                        </a>
+                    </li>
                 </ol>
             </div>
         </div>

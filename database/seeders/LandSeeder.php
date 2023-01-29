@@ -17,12 +17,12 @@ class LandSeeder extends Seeder
      */
     public function run()
     {
-        landscape::create(['name'=>'ب/3312 مخطط 2']);
-        landscape::create(['name'=>'ج|7842 مخطط أ']);
-        landDirection::create(['name'=>'جنوبي 12 وشمالي 22']);
-        landDirection::create(['name'=>'15 غربي 8 شمالي']);
+        landscape::create(['name' => 'ب/3312 مخطط 2']);
+        landscape::create(['name' => 'ج|7842 مخطط أ']);
+        landDirection::create(['name' => 'جنوبي 12 وشمالي 22']);
+        landDirection::create(['name' => '15 غربي 8 شمالي']);
         LandSiteDescription::create(['name' => 'على شارع عام']);
-        LandSiteDescription::create( ['name' => "على زاوية"]);
+        LandSiteDescription::create(['name' => "على زاوية"]);
 
         Land::factory(16)->create();
     }

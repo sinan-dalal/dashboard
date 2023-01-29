@@ -191,7 +191,8 @@ use App\Models\Office;
                 <div class="form-row">
                     <div class="form-group col-md-12">
                         <label class="control-label mt-3">الوصف</label>
-                        <textarea class="form-control" id="message" rows="3"  placeholder="اكتب وصف مختصر" name="description">
+                        <textarea class="form-control" id="message" rows="3" placeholder="اكتب وصف مختصر"
+                                  name="description">
                             @if($land->description)
                                 {{$land->description}}
                             @endif

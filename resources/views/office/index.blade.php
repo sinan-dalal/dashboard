@@ -34,7 +34,7 @@
                           'offices'=>$offices
                           ])
                         @endcomponent
-{{--                        <x-table :perPage="$perPage" :attribute="$attribute" :offices="$offices"></x-table>--}}
+                        {{--                        <x-table :perPage="$perPage" :attribute="$attribute" :offices="$offices"></x-table>--}}
                     </div>
                 </div>
             </div>

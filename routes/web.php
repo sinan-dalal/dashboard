@@ -25,7 +25,6 @@ use Illuminate\Support\Facades\Route;
 Auth::routes(['verify' => true]);
 Route::get('logout', [LoginController::class, 'logout'])->name('social.redirect');
 Route::get('login/{provider}/callback', [RegisterController::class, 'handleProviderCallback'])->name('social.handle');
-Route::get('login/{provider}/callback', [RegisterController::class, 'handleProviderCallback'])->name('social.handle');
 Route::get('/', function () {
     return view('welcome');
 });
